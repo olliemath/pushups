@@ -1,0 +1,29 @@
+[build-system]
+requires = ["flit-core>=3.8"]
+build-backend = "flit_core.buildapi"
+
+[project]
+name = "pushups"
+version = "0.1.0"
+description = "A Python program to track and analyze pushup performance."
+authors = [
+    { name = "Oliver Margetts", email = "oliver.margetts@gmail.com" }
+]
+license = { text = "MIT" }
+readme = "README.md"
+keywords = ["fitness", "exercise", "tracking"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent"
+]
+dependencies = ["matplotlib"]
+
+[project.optional-dependencies]
+dev = [
+    "pytest",
+    "ruff",
+]
+
+[project.scripts]
+pushups = "pushups:main"
