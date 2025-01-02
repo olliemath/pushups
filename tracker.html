@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pushups Tracker</title>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+        }
+
+        #chart {
+            margin-top: 20px;
+        }
+
+        .line {
+            fill: none;
+            stroke: red;
+            stroke-width: 2;
+        }
+
+        .dot {
+            fill: red;
+            stroke: white;
+            stroke-width: 2;
+        }
+
+        .tooltip {
+            position: absolute;
+            background-color: white;
+            border: 1px solid #ccc;
+            padding: 5px;
+            border-radius: 4px;
+            font-size: 12px;
+            pointer-events: none;
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .axis-label {
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Pushups Tracker</h1>
+
+    <svg id="chart" width="600" height="400"></svg>
+    <div id="tooltip" class="tooltip" style="display: none;"></div>
+
+    <script src="./plotter.js"></script>
+</body>
+</html>
