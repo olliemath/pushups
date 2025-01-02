@@ -21,6 +21,7 @@ dependencies = ["matplotlib"]
 
 [project.optional-dependencies]
 dev = [
+    "pydantic",
     "pytest",
     "ruff",
 ]

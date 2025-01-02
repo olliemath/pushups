@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import json
 import pathlib
 import typing
 from collections import OrderedDict
@@ -8,21 +9,16 @@ from datetime import date, timedelta
 import matplotlib.dates as mdates
 import matplotlib.pyplot as plt
 
-try:
-    import tomllib
-except ImportError:
-    import tomli as tomllib
-
 if typing.TYPE_CHECKING:
     from collections.abc import Iterable
 
 REPO = pathlib.Path(__file__).parent
-TOML = REPO / "finished.toml"
+TOML = REPO / "data.json"
 
 
 def main() -> None:
     with TOML.open("rb") as f:
-        data = tomllib.load(f)["completed"]
+        data = json.load(f)["completed"]
 
     data = [{"date": date(2024, 12, 31), "pushups": 0}] + data
     data = sorted(data, key=lambda row: row["date"])
