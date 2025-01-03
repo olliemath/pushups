@@ -1,7 +1,17 @@
 {
-    "title": "Completed Activities",
-    "completed": [
-        {"date": "2025-01-01", "pushups": 18},
-        {"date": "2025-01-03", "pushups": 0}
-    ]
+  "title": "Completed Activities",
+  "completed": [
+    {
+      "date": "2025-01-01",
+      "pushups": 18
+    },
+    {
+      "date": "2025-01-01",
+      "pushups": 10
+    },
+    {
+      "date": "2025-01-03",
+      "pushups": 0
+    }
+  ]
 }
